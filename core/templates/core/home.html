@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+{% load socialaccount %}
+
+{% block content %}
+  <div class="bg-white p-6 rounded shadow">
+    <h1 class="text-2xl font-bold mb-4">Welcome to Django Google OAuth demo</h1>
+
+    {% if user.is_authenticated %}
+      <p>You are logged in as <strong>{{ user.email }}</strong></p>
+    {% else %}
+      <p>Sign in with Google:</p>
+      <a href="{% provider_login_url 'google' %}" class="inline-block mt-3 px-4 py-2 bg-blue-600 text-white rounded">Login with Google</a>
+    {% endif %}
+  </div>
+{% endblock %}

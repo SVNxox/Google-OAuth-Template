@@ -1,0 +1,7 @@
+Django>=4.2
+django-allauth>=0.60.0
+python-dotenv>=1.0.0
+gunicorn
+requests
+PyJWT
+cryptography
